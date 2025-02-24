@@ -1,0 +1,12 @@
+frontend:
+  image: frontend:dev
+  replicas: 1
+
+backend:
+  image: backend:dev
+  replicas: 1
+
+database:
+  image: postgres:latest
+  storage:
+    size: 500Mi

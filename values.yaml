@@ -1,0 +1,22 @@
+frontend:
+  image: frontend:latest
+  replicas: 2
+  service:
+    type: ClusterIP
+    port: 80
+
+backend:
+  image: backend:latest
+  replicas: 2
+  service:
+    type: ClusterIP
+    port: 8080
+
+database:
+  image: postgres:latest
+  replicas: 1
+  service:
+    type: ClusterIP
+    port: 5432
+  storage:
+    size: 1Gi

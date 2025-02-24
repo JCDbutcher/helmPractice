@@ -1,0 +1,12 @@
+frontend:
+  image: frontend:stable
+  replicas: 3
+
+backend:
+  image: backend:stable
+  replicas: 3
+
+database:
+  image: postgres:stable
+  storage:
+    size: 5Gi
